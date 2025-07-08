@@ -1,5 +1,7 @@
 <script setup>
+  import { ref } from 'vue';
   const { count } = defineProps(['count']);
+  const localCount = ref(0);
 </script>
 
 <template>
@@ -14,6 +16,22 @@
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>
       .
     </h3>
+    <hr />
+    <h1>Local ref count test</h1>
+    <button
+      style="
+        border: 0 solid #e2e8f0;
+        margin-top: 10px;
+        background-color: rgb(246, 179, 82);
+        border-radius: 0.25rem;
+        font-weight: 700;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        color: rgb(24, 24, 24);
+      "
+      @click="localCount++"
+    >
+      HOST counter: {{ localCount }}
+    </button>
   </div>
 </template>
 
