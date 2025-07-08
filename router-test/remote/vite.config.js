@@ -15,6 +15,7 @@ export default defineConfig({
       name: "remote",
       exposes: {
         "./counter": "./src/main.js",
+        "./reactHelloWorld": "./src/register.js",
       },
       remotes: {},
       shared: {
