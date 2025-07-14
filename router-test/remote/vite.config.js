@@ -14,8 +14,10 @@ export default defineConfig({
       filename: "remoteEntry.js",
       name: "remote",
       exposes: {
-        "./counter": "./src/main.js",
+        "./counter": "./src/external-main.js",
         "./reactHelloWorld": "./src/register.js",
+        "./editor": "./src/editor-registry.js",
+        "./grid": "./src/grid-registry.js",
       },
       remotes: {},
       shared: {
@@ -33,14 +35,7 @@ export default defineConfig({
         },
       },
     }),
-    vue({
-      template: {
-        compilerOptions: {
-          // 대시(-)가 포함된 모든 태그를 커스텀 엘리먼트로 처리
-          isCustomElement: (tag) => tag.includes('-')
-        }
-      }
-    }),
+    vue(),
     vueDevTools(),
   ],
   resolve: {

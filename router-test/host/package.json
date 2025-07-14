@@ -1,5 +1,5 @@
 {
-  "name": "npm-create-vue",
+  "name": "host-vue3",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -10,7 +10,8 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
-    "@module-federation/bridge-vue3": "^0.10.0",
+    "@module-federation/bridge-vue3": "^0.16.0",
+    "ckeditor5": "^46.0.0",
     "pinia": "^3.0.1",
     "single-spa-vue": "^3.0.1",
     "vue": "^3.5.13",
@@ -20,6 +21,7 @@
     "@eslint/js": "^9.20.0",
     "@module-federation/vite": "^1.2.5",
     "@vitejs/plugin-vue": "^5.2.1",
+    "ag-grid-community": "^34.0.1",
     "eslint": "^9.22.0",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-prettier": "^5.2.3",

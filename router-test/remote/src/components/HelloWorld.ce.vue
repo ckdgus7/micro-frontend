@@ -2,6 +2,8 @@
   import { ref } from 'vue';
   const { count } = defineProps(['count']);
   const localCount = ref(0);
+  const agGrid = document.querySelector('wcc-ag-grid');
+  console.log('agGrid', agGrid.rowData);
 </script>
 
 <template>

@@ -4,10 +4,12 @@
   const store = useCounterStore();
   const { count } = storeToRefs(store);
   import('remote/counter');
+  import('remote/editor');
+  import('remote/grid');
 </script>
 
 <template>
-  <button
+  <!-- <button
     style="
       border: 0 solid #e2e8f0;
       margin-top: 10px;
@@ -21,7 +23,19 @@
   >
     HOST counter: {{ count }}
   </button>
+   -->
+  <hr />
+  <hr />
+  <h1>Remote Ag Grid</h1>
+  <wcc-ag-grid></wcc-ag-grid>
+  <hr />
+  <hr />
+  <h1>Remote hello-world</h1>
   <hello-world :count="count"></hello-world>
+  <hr />
+  <hr />
+  <h1>Remote Tui Editor</h1>
+  <ck-editor></ck-editor>
 </template>
 
 <style scoped />

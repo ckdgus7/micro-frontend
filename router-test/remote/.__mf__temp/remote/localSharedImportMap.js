@@ -3,11 +3,6 @@
 
     const importMap = {
       
-        "@module-federation/bridge-vue3": async () => {
-          let pkg = await import("__mf__virtual/remote__prebuild___mf_0_module_mf_2_federation_mf_1_bridge_mf_2_vue3__prebuild__.js")
-          return pkg
-        }
-      ,
         "vue": async () => {
           let pkg = await import("__mf__virtual/remote__prebuild__vue__prebuild__.js")
           return pkg
@@ -18,43 +13,17 @@
           return pkg
         }
       ,
-        "pinia": async () => {
-          let pkg = await import("__mf__virtual/remote__prebuild__pinia__prebuild__.js")
+        "@module-federation/bridge-vue3": async () => {
+          let pkg = await import("__mf__virtual/remote__prebuild___mf_0_module_mf_2_federation_mf_1_bridge_mf_2_vue3__prebuild__.js")
           return pkg
         }
       
     }
       const usedShared = {
       
-          "@module-federation/bridge-vue3": {
-            name: "@module-federation/bridge-vue3",
-            version: "0.10.0",
-            scope: ["default"],
-            loaded: false,
-            from: "remote",
-            async get () {
-              usedShared["@module-federation/bridge-vue3"].loaded = true
-              const {"@module-federation/bridge-vue3": pkgDynamicImport} = importMap 
-              const res = await pkgDynamicImport()
-              const exportModule = {...res}
-              // All npm packages pre-built by vite will be converted to esm
-              Object.defineProperty(exportModule, "__esModule", {
-                value: true,
-                enumerable: false
-              })
-              return function () {
-                return exportModule
-              }
-            },
-            shareConfig: {
-              singleton: true,
-              requiredVersion: "^0.10.0"
-            }
-          }
-        ,
           "vue": {
             name: "vue",
-            version: "3.5.13",
+            version: "3.5.17",
             scope: ["default"],
             loaded: false,
             from: "remote",
@@ -74,13 +43,13 @@
             },
             shareConfig: {
               singleton: true,
-              requiredVersion: "^3.5.13"
+              requiredVersion: "^3.5.17"
             }
           }
         ,
           "vue-router": {
             name: "vue-router",
-            version: "4.5.0",
+            version: "4.5.1",
             scope: ["default"],
             loaded: false,
             from: "remote",
@@ -100,19 +69,19 @@
             },
             shareConfig: {
               singleton: true,
-              requiredVersion: "^4.5.0"
+              requiredVersion: "^4.5.1"
             }
           }
         ,
-          "pinia": {
-            name: "pinia",
-            version: "3.0.1",
+          "@module-federation/bridge-vue3": {
+            name: "@module-federation/bridge-vue3",
+            version: "0.16.0",
             scope: ["default"],
             loaded: false,
             from: "remote",
             async get () {
-              usedShared["pinia"].loaded = true
-              const {"pinia": pkgDynamicImport} = importMap 
+              usedShared["@module-federation/bridge-vue3"].loaded = true
+              const {"@module-federation/bridge-vue3": pkgDynamicImport} = importMap 
               const res = await pkgDynamicImport()
               const exportModule = {...res}
               // All npm packages pre-built by vite will be converted to esm
@@ -126,7 +95,7 @@
             },
             shareConfig: {
               singleton: true,
-              requiredVersion: "^3.0.1"
+              requiredVersion: "^0.16.0"
             }
           }
         
